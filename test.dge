@@ -1,0 +1,7 @@
+#!/bin/sh
+export SDL_NOMOUSE=1
+export SDL_AUDIODRIVER=dsp
+cd "$(dirname "$0")"
+echo 2 > /proc/jz/lcd_a320
+python main.py "$1" > out.log
+echo 0 > /proc/jz/lcd_a320
