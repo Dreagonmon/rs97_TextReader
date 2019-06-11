@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 import pygame, os, sys, codecs, traceback
 from pygame.locals import *
-import ui, configloader
-if os.path.exists("debug.lock"):
-    import devicewin as device
-else :
-    import device
+from pyg_app.ui import ui
+from pyg_app.data import configloader
+from pyg_app.hw import device
 MAX_FPS = 15
 # init
 device.init()
@@ -38,7 +36,7 @@ try:
     configloader.init_string(local_file)
     # path
     import codecs
-    import screenframes, widgets
+    from pyg_app.ui import screenframes, widgets
     # base frame
     if len(sys.argv) > 1:
         coding = configloader.config.get("GLOBAL","syspath.coding","UTF-8")

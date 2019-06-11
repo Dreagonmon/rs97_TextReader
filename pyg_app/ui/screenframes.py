@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 # --ScreenFrame subclass--
-import pygame, os, codecs, ui
-if os.path.exists("debug.lock"):
-    import devicewin as device
-else :
-    import device
-from ui import ScreenFrame
-from configloader import config, string, Config
-from widgets import ListWidget, TextWidget
+import pygame, os, codecs
+from . import ui
+from ..hw import device
+from ..data.configloader import config, Config
+from .ui import Widget,ScreenFrame
+from .widgets import ListWidget, TextWidget
 class WidgetFrame(ScreenFrame):
     # A ScreenFrame with simple widget manager
     def __init__(self,screen):

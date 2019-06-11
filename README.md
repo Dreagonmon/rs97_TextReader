@@ -15,8 +15,9 @@ key map:
 ##  Install
 
 -   Copy any file and folder into the game console anywhere you want.
--   Copy a .ttf font file into ./fonts folder, rename it to default.ttf (we don`t provide font by default).
--   delete debug.lock and devicewin.py, these files are using for debug on Windows.
+-   Copy a .ttf font file into ./fonts folder, rename it to default.ttf (we don`t provide font).
+-   delete ./pyg_app/hw/debug.lock, this files are using for debug on Windows.
+-   Rename ./config/config-rs97.cfg to ./config/config.cfg
 -   Modify ./config/config.cfg if you like. No information at this moment.
 -   On game console, run run.dge or create a shortcut with file selector using test.dge
 

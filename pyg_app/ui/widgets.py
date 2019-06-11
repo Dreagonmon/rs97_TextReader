@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 # --Widget subclass--
 import os, pygame
-if os.path.exists("debug.lock"):
-    import devicewin as device
-else :
-    import device
-from configloader import config
-from ui import Widget
+from ..hw import device
+from ..data.configloader import config
+from .ui import Widget
 class ListWidget(Widget):
     # A widget that display list and manager select curser
     def __init__(self,strlist,callback=None,show_curser=True,config_section="GLOBAL"):
